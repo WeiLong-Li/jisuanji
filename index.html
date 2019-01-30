@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+         * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .calculator {
+            width: 326px;
+            height: 460px;
+            margin: 80px auto;
+            background-color: #368590;
+            border-radius: 5px;
+            box-shadow: 0 2px 15px black;
+            overflow: hidden;
+        }
+
+        .calculator .c_screen {
+            position: relative;
+            width: 326px;
+            height: 110px;
+            background-color: #96a4c2;
+            border-radius: 5px;
+            box-shadow: inherit;
+        }
+
+        .calculator .c_screen > p {
+            position: absolute;
+            top: 50%;
+            margin-top: -28px;
+            width: 236px;
+            text-align: center;
+            word-break: break-all;
+            color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 10px 45px;
+        }
+
+        .calculator .c_row {
+            margin: 0 23px;
+        }
+
+        button {
+            cursor: pointer;
+            width: 60px;
+            height: 45px;
+            margin: 20px 2px 0;
+            border: 0px;
+            border-radius: 5px;
+            color: #fff;
+            background-color: #2b2f5b;
+            outline: none;
+        }
+
+        button::selection {
+            color: #fff;
+        }
+
+        button:active {
+            box-shadow: 0 0 5px 5px dodgerblue;
+        }
+
+        .c_func_btn {
+            background: linear-gradient(to bottom, rgba(252, 156, 23, 1) 0%, rgba(247, 126, 27, 1) 100%);
+        }
+        .d{
+            width: 60px;
+            height: 110px;
+            float: right;
+            position: relative;
+            bottom:66px;
+            right:32px;
+        }
+        .z{
+            width: 129px;
+            height: 45px;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <div class="c_screen">
+            <p></p>
+        </div>
+        <div class="c_btn_wrapper">
+            <div class="c_row">
+                <button class="c_func_btn">/</button>
+                <button class="c_func_btn">*</button>
+                <button class="c_func_btn">CE</button>
+                <button class="c_func_btn">AC</button>
+            </div>
+            <div class="c_row">
+                <button>7</button>
+                <button>8</button>
+                <button>9</button>
+                <button class="c_func_btn">+</button>
+            </div>
+            <div class="c_row">
+                <button>4</button>
+                <button>5</button>
+                <button>6</button>
+                <button class="c_func_btn">-</button>
+            </div>
+            <div class="c_row">
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+            </div>
+            <button class="c_func_btn d">=</button>
+            <div class="c_row">
+                <button class="z">0</button>
+                <button>.</button>
+            </div>
+        </div>
+    </div>
+    <script src="./number.js"></script>
+</body>
+</html>
